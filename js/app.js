@@ -39,5 +39,28 @@ var renderTopGames = async function() {
          
 };
 
+/**
+ * Render top current streams
+ */
+
+var renderTopCurrentStreams = async function() {
+    var topStreams = await fetchFromTwitch('/streams?first=10');
+    console.log(topStreams);
+    var streamHtml = '';
+
+    for (var i = 0; i < topStreams.data.length; i++) {
+        var topStream = topStreams.data[i];
+        if (i == 0 || i == 1) {
+            streamHtml += '<div class="col-6 col-sm-6 col-md-6 col-lg-6"><img src="'+topStream.thumbnail_url.replace('{width}', '440').replace('{height}', '248')+'">'+topStream.user_name+' - '+topStream.viewer_count+'</div>';
+        } else {
+            streamHtml += '<div class="col-6 col-sm-6 col-md-3 col-lg-3"><img src="'+topStream.thumbnail_url.replace('{width}', '440').replace('{height}', '248')+'">'+topStream.user_name+' - '+topStream.viewer_count+'</div>';
+        }
+    }
+
+    $('.js-top-streams').html(streamHtml)
+         
+};
+
 renderTopGames();
+renderTopCurrentStreams();
  
