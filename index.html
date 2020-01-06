@@ -56,32 +56,40 @@
 
     </header>
 
-    <selection id="top-games">
-        <div>
-            <div class="container">
+    <section id="top-games">
+        <div class="container">
 
-                <div class="row js-top-games">
-                    <!-- This data will populate from js -->
-                </div>
-
+            <div class="row js-top-games">
+                <!-- This data will populate from js -->
             </div>
 
+            <div class="loading js-loading">
+                Loading...
+            </div>
 
         </div>
+    </section>
 
 
-    </selection>
-
-
-    <selection id="analytics">
+    <section id="analytics">
         <div class="analytics">
             <h2>ANALYTICS</h2>
+
+            <select class="form-control js-analytics-dropdown">
+                <!-- This data will populate from js -->
+            </select>
+            
+            <canvas id="myChart"></canvas>
+
+            <div class="loading js-loading">
+                Loading...
+            </div>
+        
         </div>
+    </section>
 
-    </selection>
 
-
-    <selection id="top-streamers">
+    <section id="top-streamers">
         <h3>TOP 10 STREAMERS</h3>
 
         <div>
@@ -93,14 +101,16 @@
                 </div>
             </div>
 
-
         </div>
 
+        <div class="loading js-loading">
+            Loading...
+        </div>
 
-    </selection>
+    </section>
 
 
-    <selection id="about">
+    <section id="about">
         <div class="container">
             <div class="col section-height">
                 <h2>ABOUT</h2>
@@ -113,13 +123,13 @@
                     dolor.</p>
             </div>
         </div>
-    </selection>
+    </section>
 
 
-    <selection id="contact">
+    <section id="contact">
         <div>CONTACT</div>
 
-    </selection>
+    </section>
 
 
     <script
@@ -132,6 +142,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="js/app.js"></script>
 </body>
 

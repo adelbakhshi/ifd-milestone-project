@@ -35,8 +35,8 @@ var renderTopGames = async function() {
         }
     }
 
-    $('.js-top-games').html(gameHtml)
-         
+    $('.js-top-games').html(gameHtml);
+    $('#top-games .js-loading').hide();
 };
 
 /**
@@ -45,7 +45,7 @@ var renderTopGames = async function() {
 
 var renderTopCurrentStreams = async function() {
     var topStreams = await fetchFromTwitch('/streams?first=10');
-    console.log(topStreams);
+
     var streamHtml = '';
 
     for (var i = 0; i < topStreams.data.length; i++) {
@@ -58,9 +58,75 @@ var renderTopCurrentStreams = async function() {
     }
 
     $('.js-top-streams').html(streamHtml)
-         
+    $('#top-streamers .js-loading').hide();
+};
+
+/**
+ * Render chart
+ */
+
+var renderChart = function(data, gameName) {
+
+    var chartStreamers = [];
+    var chartViewerCounts = [];
+    for (let i = 0; i < data.length; i++) {
+        const item = data[i];
+        chartStreamers.push(item.user_name);
+        chartViewerCounts.push(item.viewer_count);
+    }
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'bar',
+
+        // The data for our dataset
+        data: {
+            labels: chartStreamers,
+            datasets: [{
+                label: 'Top streamers of '+gameName,
+                // backgroundColor: ['red', 'blue'],
+                barPercentage: 0.5,
+                barThickness: 6,
+                maxBarThickness: 8,
+                minBarLength: 2,
+                data: chartViewerCounts
+            }]
+        },
+
+        // Configuration options go here
+        options: {}
+    });
+}
+
+/**
+ * Render Analytics
+ */
+
+var renderAnalytics = async function() {
+    var topGames = await fetchFromTwitch('/games/top?first=10');
+        
+    var html = '';
+    
+    for (var i = 0; i < topGames.data.length; i++) {
+        var topGame = topGames.data[i];
+        html += '<option value="'+topGame.id+'">'+topGame.name+'</option>';
+    }
+    
+    $('.js-analytics-dropdown').html(html);
+    
+    $('.js-analytics-dropdown').on('change', async function() {
+        var topStreams = await fetchFromTwitch('/streams?first=10&game_id='+$(this).val());
+        renderChart(topStreams.data, $('.js-analytics-dropdown option:selected').text());
+    });
+    
+    var topStreams = await fetchFromTwitch('/streams?first=10&game_id='+topGames.data[0].id);
+    renderChart(topStreams.data, topGames.data[0].name);
+
+    $('#analytics .js-loading').hide();
 };
 
 renderTopGames();
 renderTopCurrentStreams();
+renderAnalytics();
  
