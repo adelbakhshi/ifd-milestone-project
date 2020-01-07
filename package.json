@@ -1,0 +1,22 @@
+{
+  "name": "ifd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm install && node-sass --output-style compressed -o css sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adelbakhshi/ifd-milestone-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adelbakhshi/ifd-milestone-project/issues"
+  },
+  "homepage": "https://github.com/adelbakhshi/ifd-milestone-project#readme",
+  "dependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
