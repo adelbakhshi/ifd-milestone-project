@@ -1,3 +1,6 @@
+body {
+    font-family: 'Nunito', sans-serif;
+}
 section {
     background-size: cover;
     display: block;
@@ -9,7 +12,7 @@ section {
 .analytics {
     width: 100%;
     background-color: $color-gray;
-    color: #fff;
+    color: #000;
     text-align: center;
 }
 
@@ -18,4 +21,54 @@ section {
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.top-10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #F2F3F4;
+}
+.top-10-title {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+
+.streamer-viewer {
+    font-size: 14px;
+    font-weight: normal;
+    color: #AEB6BF;
+}
+
+h2 {
+    font-family: sans-serif;
+    text-align: center;
+    color: #808B96;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.footer-bg-color {
+    background-color: #f8f9fa;
+}
+#top-games {
+    background-color: #212F3D;
+}
+
+#analytics {
+    background-color: #EAECEE;
+}
+
+#top-streamers {
+    background-color: #212F3D;
+}
+
+#about {
+    background-color: #EAECEE;
+} 
+
+#contact {
+    background-color: #212F3D;
 }
