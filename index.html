@@ -10,6 +10,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
 
 
     <title>Twitch Tops</title>
@@ -57,9 +58,9 @@
     </header>
 
     <section id="top-games">
-        <div class="container">
-
-            <div class="row js-top-games">
+        <div class="container-fluid">
+            <h2>Top 10 Games</h2>
+            <div class="row js-top-games top-10">
                 <!-- This data will populate from js -->
             </div>
 
@@ -72,30 +73,29 @@
 
 
     <section id="analytics">
-        <div class="analytics">
-            <h2>ANALYTICS</h2>
+        <div class="container">
+            <div class="analytics">
+                <h2>Analytics</h2>
+                <select class="form-control js-analytics-dropdown">
+                    <!-- This data will populate from js -->
+                </select>
 
-            <select class="form-control js-analytics-dropdown">
-                <!-- This data will populate from js -->
-            </select>
-            
-            <canvas id="myChart"></canvas>
-
-            <div class="loading js-loading">
-                Loading...
+                <canvas id="myChart"></canvas>
+                <div class="loading js-loading">
+                    Loading...
+                </div>
             </div>
-        
         </div>
     </section>
 
 
     <section id="top-streamers">
-        <h3>TOP 10 STREAMERS</h3>
+        <h2>Top 10 Streamers</h2>
 
         <div>
-            <div class="container">
+            <div class="container-fluid">
 
-                
+
                 <div class="row js-top-streams">
                     <!-- This data will populate from js -->
                 </div>
@@ -112,30 +112,65 @@
 
     <section id="about">
         <div class="container">
-            <div class="col section-height">
-                <h2>ABOUT</h2>
-                <p>Pariatur anim in dolor elit enim et ex. Magna do id id ea ut sint deserunt ut ea nulla. Ex sit mollit
-                    quis consequat magna laboris esse. Eiusmod ullamco et nisi consectetur nulla anim nostrud
-                    adipisicing
-                    aliqua laboris excepteur. Anim ea do velit officia non veniam qui duis consequat fugiat. Aute
-                    officia
-                    occaecat aute aliquip id eu enim reprehenderit est consectetur voluptate. Consectetur in est est do
-                    dolor.</p>
+            <h2>About</h2>
+            <div class="col text-justify">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                    Enim ut sem viverra aliquet eget. Nunc aliquet bibendum enim facilisis. Libero id faucibus nisl
+                    tincidunt eget.
+                    Ut venenatis tellus in metus vulputate eu scelerisque felis. Volutpat blandit aliquam etiam erat
+                    velit scelerisque.
+                    Erat pellentesque adipiscing commodo elit at imperdiet dui. Donec et odio pellentesque diam volutpat
+                    commodo sed.
+                    Mi in nulla posuere sollicitudin aliquam ultrices.
+                    Adipiscing diam donec adipiscing tristique risus nec feugiat in fermentum. Dictum sit amet justo
+                    donec enim diam vulputate ut.</p>
+
+                    <p>Odio eu feugiat pretium nibh ipsum. Ipsum dolor sit amet consectetur.
+                    Libero justo laoreet sit amet cursus. Eget felis eget nunc lobortis mattis aliquam faucibus purus.
+                    Porta nibh venenatis cras sed felis eget velit aliquet sagittis.
+                    Tempus egestas sed sed risus pretium quam vulputate dignissim. Venenatis cras sed felis eget.
+                    In arcu cursus euismod quis viverra nibh. Tincidunt arcu non sodales neque sodales ut etiam.
+                    Ultrices in iaculis nunc sed augue lacus viverra vitae.
             </div>
         </div>
     </section>
 
 
     <section id="contact">
-        <div>CONTACT</div>
-
+        <div class="container">
+            <div class="row justify-content-center">
+                <h2>Get in touch</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                    <form>
+                        <div class="form-group">
+                            <input type="name" class="form-control" id="name" placeholder="Name" required>
+                            <br>
+                            <input type="email" class="form-control" id="email" aria-describedby="email"
+                                placeholder="Enter email" required>
+                            <br>
+                            <textarea rows="7" name="message" id="message" class="form-control" placeholder="Message"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col text-center pt-3 footer-bg-color">
+                <p>© Copyright 2020 Twitch Tops - All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
 
-    <script
-        src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
