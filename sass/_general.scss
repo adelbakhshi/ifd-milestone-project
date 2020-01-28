@@ -39,36 +39,36 @@ section {
 .streamer-viewer {
     font-size: 14px;
     font-weight: normal;
-    color: #AEB6BF;
+    color: $color-gray-text;
 }
 
 h2 {
     font-family: sans-serif;
     text-align: center;
-    color: #808B96;
+    color: $color-gray-text;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
 .footer-bg-color {
-    background-color: #f8f9fa;
+    background-color: $color-light-gray;
 }
 #top-games {
-    background-color: #212F3D;
+    background-color: $color-dark-gray;
 }
 
 #analytics {
-    background-color: #EAECEE;
+    background-color: $color-light-gray;
 }
 
 #top-streamers {
-    background-color: #212F3D;
+    background-color: $color-dark-gray;
 }
 
 #about {
-    background-color: #EAECEE;
+    background-color: $color-light-gray;
 } 
 
 #contact {
-    background-color: #212F3D;
+    background-color: $color-dark-gray;
 }
