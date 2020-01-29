@@ -2,7 +2,7 @@
 
 $(function () {
     $('.nav-item').on('click', function () {
-        $('.navbar-collapse').toggleClass('show')
+        $('.navbar-collapse').toggleClass('show');
     });
 });
 
@@ -67,7 +67,7 @@ var renderTopCurrentStreams = async function () {
         }
     }
 
-    $('.js-top-streams').html(streamHtml)
+    $('.js-top-streams').html(streamHtml);
     $('#top-streamers .js-loading').hide();
 };
 
@@ -114,7 +114,7 @@ var renderChart = function (data, gameName) {
     });
 
     return chart;
-}
+};
 
 /**
  * Render Analytics
