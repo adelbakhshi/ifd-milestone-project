@@ -33,7 +33,7 @@ Below is the wireframe I created in “**Balsamic Mockup 3**”. Except the Top 
 ![Wireframe](https://github.com/adelbakhshi/ifd-milestone-project/blob/master/sketch/twitchtops.png?raw=true)
 
 ### Features
-- **Loding**
+- **Loading**
 To make sure when user open the website all the elements are loaded and in the correct position, 
 
 - **Games**
@@ -62,10 +62,10 @@ As user scroll the navigation bar remains to the top of the browser. It helps us
 - I used Balsamic Mockup 3 to create the wireframe.
 
 ##### [Visual Studio Code](https://code.visualstudio.com/)
-- Visual Studio Code was used as my code editor.
+- Visual Studio Code is used as my code editor.
 
 ##### HTML5
-- HTML5 was used for structure and basic elements.
+- HTML5 is used for structure and basic elements.
 
 ##### CSS3 - SASS
 - I used CSS3 and SASS to add style to the structure and the elements.
@@ -87,7 +87,7 @@ As user scroll the navigation bar remains to the top of the browser. It helps us
 
 
 ##### [Postman](https://www.getpostman.com/)
-- I used Postman tools to test the APIs
+- I used Postman tool to test the APIs
 
 ### Testing
 
@@ -108,7 +108,7 @@ As user scroll the navigation bar remains to the top of the browser. It helps us
 
 The cross-browser testing is done in  on Safari, Google Chrome, Mozilla Firefox, Microsoft Edge, Opera and it works as expected.
 
-Google Chrome developer tool was used to test the responsiveness on the following devices size 
+Google Chrome developer tool is used to test the responsiveness on the following devices size 
 iPad / iPad Pro
 iPhone 5/SE / iPhone X
 iPhone 6/7/8 and Plus
